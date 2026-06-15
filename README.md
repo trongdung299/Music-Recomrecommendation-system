@@ -4,8 +4,9 @@
 
 ## 🚀 Tính Năng Nổi Bật
 
+- **Đề xuất dựa trên Autoencoder (Latent Space)**: Tìm kiếm các bài hát có đặc trưng ngầm (latent features) tương đồng bằng cách sử dụng Autoencoder kết hợp với FAISS để tìm kiếm vector vector lân cận nhanh chóng.
 - **Đề xuất tuần tự (SASRec)**: Dự đoán các bài hát tiếp theo mà người dùng sẽ nghe dựa trên lịch sử nghe nhạc của họ, sử dụng mô hình Self-Attention (Transformer).
-- **Đề xuất theo nội dung**: Gợi ý các bài hát tương đồng dựa trên đặc trưng âm thanh và thể loại âm nhạc bằng thuật toán TF-IDF và Cosine Similarity.
+- **Đề xuất theo nội dung cơ bản**: Gợi ý các bài hát tương đồng dựa trên đặc trưng âm thanh và thể loại âm nhạc bằng thuật toán TF-IDF và Cosine Similarity.
 - **RESTful API Backend**: Backend hiệu năng cao được xây dựng bằng FastAPI, xử lý các yêu cầu gợi ý từ mô hình và truy vấn dữ liệu nhanh chóng.
 - **Frontend Tương Tác**: Giao diện người dùng mượt mà được xây dựng bằng React để khám phá và trải nghiệm các bài hát được đề xuất.
 
@@ -14,7 +15,7 @@
 - **Backend**: Python, FastAPI, SQLAlchemy, PyTorch, Pandas
 - **Frontend**: React, Node.js
 - **Database**: MySQL
-- **Machine Learning**: PyTorch (SASRec), Scikit-Learn (Content-Based)
+- **Machine Learning**: PyTorch (SASRec, Autoencoder), Scikit-Learn (TF-IDF), FAISS (Vector Search)
 
 ## 📁 Cấu Trúc Dự Án
 
