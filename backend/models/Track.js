@@ -1,0 +1,20 @@
+class Track{
+    constructor(track_id,track_name,image){
+    this.popularity=0;
+    this.year=0;
+    this.genre='';
+  this.danceability=0;
+  this.energy=0;
+  this.track_key=0;
+  this.loudness=0;
+  this.track_mode=0;
+  this.speechiness=0;
+  this.acousticness=0;
+  this.instrumentalness=0;
+  this.liveness=0;
+  this.valence=0;
+  this.tempo=0;
+  this.duration_ms=0;
+  this.time_signature=0;
+  }
+}

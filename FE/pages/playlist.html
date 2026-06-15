@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark layout-loading" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="view-transition" content="same-origin" />
+<script src="../assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/css/shared.css" />
+<script src="../assets/js/layout.js" defer></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<div id="app-sidebar"></div>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden relative bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<header id="app-header"></header>
+<!-- Content -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8">
+<!-- Playlists Grid -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold tracking-tight">Bài hát thịnh hành</h2>
+<a class="text-sm font-bold text-primary hover:underline" href="#">Show all</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<!-- Liked Card -->
+<div class="group relative bg-card-bg p-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+<div class="aspect-square rounded-lg bg-gradient-to-br from-indigo-600 to-primary mb-4 flex items-center justify-center shadow-lg group-hover:shadow-primary/20">
+<span class="material-symbols-outlined text-white text-5xl">favorite</span>
+</div>
+<h3 class="font-bold text-base mb-1 text-white">Liked Songs</h3>
+<p class="text-slate-400 text-xs">245 songs</p>
+<button class="absolute bottom-16 right-6 size-12 rounded-full bg-primary text-background-dark shadow-xl flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all" type="button" data-nav-type="song" data-id="liked-songs" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 font-bold">play_arrow</span>
+</button>
+</div>
+<!-- Card 1 -->
+<div class="group relative bg-card-bg p-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+<img class="aspect-square rounded-lg mb-4 object-cover shadow-lg group-hover:shadow-black/40" data-alt="Abstract neon dance music album cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOrhOvYp8AZ1Y5VA63fFXI0OdXDc_e_NHA5sVdpcFdYeIpQ-0f9kjbih3XHg3vVYJi6ZOaC7oy0ktJNIQ13AWH28YnecZ2LivaO8ZPAZLjcb4rPqFd2i1qqGtfGBCFmWafKaojaCc0YyO5kF6GYNfV2cTFUGao2erwQ4tD8bnoiIKDItCflEvyCblqv_224cdtD1P-RJNREJAeMgD8qLIoj1EoIip_iS6HEFNJm-5oqstzdjkZ7LHXocubHPbA2DtePxiM_D2Axg0"/>
+<h3 class="font-bold text-base mb-1 text-white">Daily Mix 1</h3>
+<p class="text-slate-400 text-xs">Made for you</p>
+<button class="absolute bottom-16 right-6 size-12 rounded-full bg-primary text-background-dark shadow-xl flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all" type="button" data-nav-type="song" data-id="daily-mix-1" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 font-bold">play_arrow</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-card-bg p-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+<img class="aspect-square rounded-lg mb-4 object-cover shadow-lg group-hover:shadow-black/40" data-alt="Calm aesthetic ocean view sunset background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQMEHJbE_gCqEUwGL8OWyz4P9W_CJMf2R80RrtzO83psVkDH2ZvQSfH7q8yGuECFnIbUdHV5aw9u2rcMxOlq_bw40znXVW2cDelSsGrczRfRAnZTY0RPcJjflW5MpKAnMjKqgdWyLD_1SAmshhA9QVtPDP60pYSd-o0Eog0nAp26cBCnTyaM0jpWODnhplxW9TYzAkveqamlMRb0tMGmORTjsbMjgBQlvni1zTnXgCIlv6taGh56YuEfMy54JU6wEIXOBensmtQjw"/>
+<h3 class="font-bold text-base mb-1 text-white">Chill Vibes</h3>
+<p class="text-slate-400 text-xs">User Playlist</p>
+<button class="absolute bottom-16 right-6 size-12 rounded-full bg-primary text-background-dark shadow-xl flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all" type="button" data-nav-type="song" data-id="chill-vibes" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 font-bold">play_arrow</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-card-bg p-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+<img class="aspect-square rounded-lg mb-4 object-cover shadow-lg group-hover:shadow-black/40" data-alt="Vibrant night city street light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxvEBt7hZijoJL70wcLBFRnGy4TcgyrUG-KyvARARAn8NjlNdjo7LG0TyBS0hXQhS780S7CfH0gBzMMt7vCq35BwMCWVgx49bcKYgJYhq45jhH7GMMHDlKwtnVZs-zOeC56J6AnVLDhVEkn1wQQ-mSM2r2VdIUCm_IZOYMuUkGOFGATmyPfsUkueC4Z8s9DMG7kRddncDKFWx-jdH5IKGVvN2GdvjmKR1QRs2VWW4_vvmBYRnli-_fPoE1NZuBBevaXzbmJai7T-M"/>
+<h3 class="font-bold text-base mb-1 text-white">Night Drive</h3>
+<p class="text-slate-400 text-xs">User Playlist</p>
+<button class="absolute bottom-16 right-6 size-12 rounded-full bg-primary text-background-dark shadow-xl flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all" type="button" data-nav-type="song" data-id="night-drive" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 font-bold">play_arrow</span>
+</button>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-card-bg p-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+<img class="aspect-square rounded-lg mb-4 object-cover shadow-lg group-hover:shadow-black/40" data-alt="Concert stage with colorful stage lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvTVOj_hfMn3exYepIsAvYUGYqOPJtpXv2DABKRuDOnigraOdmGOIM0ADjGCUY_S4pzCzIHQ2JNZ860yraNYlQRq5FSaAoHzuUG4KSmwN9caf0RuUBXbqCSGmzz-W-gdJOJz840y1tvHznLkED5F0GwOVIv9LYW4D7Y_uLVGdwjOdIBHJ8AGRbNQrxjK_dR9_gXU0GGPdzc64ApdoSJVhLWEElI8QrfaRmE4BkpYeX3qxVR_sCz7fhweQM0bdQyakOmwzy_xN-3dM"/>
+<h3 class="font-bold text-base mb-1 text-white">Top Hits 2024</h3>
+<p class="text-slate-400 text-xs">MusicStream Curated</p>
+<button class="absolute bottom-16 right-6 size-12 rounded-full bg-primary text-background-dark shadow-xl flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all" type="button" data-nav-type="song" data-id="top-hits-2024" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 font-bold">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Selected Playlist Table -->
+<section>
+<div class="flex items-end gap-6 mb-8">
+<div class="size-48 rounded-lg shadow-2xl bg-gradient-to-br from-emerald-500 to-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white text-7xl">favorite</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-primary/60">Public Playlist</span>
+<h2 class="text-5xl lg:text-7xl font-black tracking-tight">Liked Songs</h2>
+<div class="flex items-center gap-2 mt-4 text-sm font-medium">
+<span class="font-bold">Alex Rivera</span>
+<span class="size-1 rounded-full bg-slate-500"></span>
+<span class="text-slate-500">245 songs, 12 hr 45 min</span>
+</div>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark/50 rounded-xl overflow-hidden border border-primary/5">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-slate-400 text-xs uppercase tracking-wider border-b border-white/5">
+<th class="px-6 py-4 font-semibold w-12 text-center">#</th>
+<th class="px-4 py-4 font-semibold">Title</th>
+<th class="px-4 py-4 font-semibold">Album</th>
+<th class="px-4 py-4 font-semibold text-right pr-12">
+<span class="material-symbols-outlined text-base">schedule</span>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="group hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-3 text-center text-sm text-slate-500 group-hover:text-primary">
+<button class="hidden group-hover:inline-flex items-center justify-center size-8 rounded-full bg-primary text-background-dark" type="button" data-nav-type="song" data-id="midnight-city" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 text-lg">play_arrow</span>
+</button>
+<span class="group-hover:hidden">1</span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded bg-slate-200 dark:bg-slate-800 shrink-0 overflow-hidden">
+<img class="object-cover size-full" data-alt="Album art featuring modern typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWlFzt9uTD3cCm8ZL33IehSjMNsPkks3EeJZ6Z_-RCli9I4irYVQbAYiYgWlI5Xz1GFniMyOC5QD645CNoXykotomS1SyH9BbimpCfzcAFv0EQCsPY25ZZeu_ckwuiRof6QMlk5ob5THxWWKEGta9lCoAYsoTfV4S3GMDqdnukGN9OKprJTs8AQY46v3IHre7ddx3EMonvRarDVhTKw-47SNQDMJ3W73s8LBVrvA19_r0PmCgd1pI-5PIREj9PO1dsWMwAmgmAXDs"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-bold truncate group-hover:text-primary">Midnight City</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">M83</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">Hurry Up, We're Dreaming</td>
+<td class="px-4 py-3 text-sm text-slate-500 text-right pr-12">4:03</td>
+</tr>
+<tr class="group hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-3 text-center text-sm text-slate-500 group-hover:text-primary">
+<button class="hidden group-hover:inline-flex items-center justify-center size-8 rounded-full bg-primary text-background-dark" type="button" data-nav-type="song" data-id="blinding-lights" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 text-lg">play_arrow</span>
+</button>
+<span class="group-hover:hidden">2</span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded bg-slate-200 dark:bg-slate-800 shrink-0 overflow-hidden">
+<img class="object-cover size-full" data-alt="Minimalist abstract album art design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbMdEZaK51XyOgnds4gB3fAUXA6ewdRLJczOU7vfEp92Tqd5Zw_48Hf7o9QejYJgLT1Qq_0ww4G50ZcQWqfClr7hhIkDg7epBWR3HypoVozguFEjkhgpkYeRgZN87T_WxIDwLLY2ZVBqOsgAcOkdvwWS5Kmt1HIVi_ixHqdb6riVHuOHkteQN8lcFa7OCAhvSTu6RzrmfQC_yHdZNwgR3_c9M46RjxJUklcdoMZEppcSs1ulABgxkEVgpNdtFDcgatT6vnmyTljQc"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-bold truncate group-hover:text-primary">Blinding Lights</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">The Weeknd</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">After Hours</td>
+<td class="px-4 py-3 text-sm text-slate-500 text-right pr-12">3:20</td>
+</tr>
+<tr class="group hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-3 text-center text-sm text-slate-500 group-hover:text-primary">
+<button class="hidden group-hover:inline-flex items-center justify-center size-8 rounded-full bg-primary text-background-dark" type="button" data-nav-type="song" data-id="nightcall" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 text-lg">play_arrow</span>
+</button>
+<span class="group-hover:hidden">3</span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded bg-slate-200 dark:bg-slate-800 shrink-0 overflow-hidden">
+<img class="object-cover size-full" data-alt="Retro synthwave style album cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnqMI5HYf60qKCO98pDnf8S12f--F__MUYvqFtXd-B5QUrXZOOUmpueKht2TxjlXQrtJXee80i3UzMRk3pabvFbK0YJDypCaWyZVhSaUAl3ad4TAkI2vvbMAPvhEF7s-DfA9vWWXH7IOUDFilMwhk5DCQdlgfIIIokQl0znkwgH3BI9eXnwa5Pn2ZLnd3CxYavTghdPAUTzWUO9BIjfl_wJe0wBuJvPHa4PSJoOBFi4w2ikurtWSbWELI0y1hlAv2d-4K_a03Qdkc"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-bold truncate group-hover:text-primary">Nightcall</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Kavinsky</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">OutRun</td>
+<td class="px-4 py-3 text-sm text-slate-500 text-right pr-12">4:18</td>
+</tr>
+<tr class="group hover:bg-white/5 transition-colors cursor-pointer">
+<td class="px-6 py-3 text-center text-sm text-slate-500 group-hover:text-primary">
+<button class="hidden group-hover:inline-flex items-center justify-center size-8 rounded-full bg-primary text-background-dark" type="button" data-nav-type="song" data-id="starboy" aria-label="Play song">
+<span class="material-symbols-outlined fill-1 text-lg">play_arrow</span>
+</button>
+<span class="group-hover:hidden">4</span>
+</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded bg-slate-200 dark:bg-slate-800 shrink-0 overflow-hidden">
+<img class="object-cover size-full" data-alt="Dynamic energetic concert crowd silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtc0d-PnC7qKSPWas0zhlzLSzRb3UHGCP0AKB9DK4VZvq-3jS_m4o9E-7h66aETbdlmww-jYkzEUPvRrggChKrF-RZMrj76thjo1sKVQjMdYcHq1xkN2B9HQELDe4Ma6QRAnlSp1gSKM_ysSkae3WbEw47vPnjIO0tu5QbE6sHxRMbg3Mp_OWxSmLkVDvYb_5iHwUXxlOWR4BprIJZ4x_u1GMFxpZMA1Fpsv8oeWJBtjqBp263DKMBtbpzmhPQp9CPc_RT4oJX35g"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-bold truncate group-hover:text-primary">Starboy</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">The Weeknd ft. Daft Punk</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 text-sm text-slate-500 dark:text-slate-400">Starboy</td>
+<td class="px-4 py-3 text-sm text-slate-500 text-right pr-12">3:50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+<!-- Right Side Player Bar (Optional but common in such UIs) -->
+<div class="w-80 border-l border-primary/10 bg-background-light dark:bg-background-dark hidden 2xl:flex flex-col p-6">
+<h3 class="text-lg font-bold mb-6">Now Playing</h3>
+<div class="flex flex-col items-center">
+<img class="size-64 rounded-xl shadow-2xl mb-6 object-cover border border-primary/10" data-alt="Currently playing track large album art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsy1zwO53O-uppfqU6nfUZjJmkmyGYeQ8U6n7Fr4G55r-uCfF0VwxgUi2hzQBiktgpbkrRMNWXlkBCQsxiyDVKVwmrJZ1RAOVu4LEE-6lSUKWrMRJckzSrbJo2OvlGCgL7XB1RMEDT669Ti8_Bvf9rwZ8vNQ-P-pyadcPPCuo2V2EXKJdfarEIYAwKiSECDtFxco7X9B_lip6Lqfp6s4KiXWp_F3xGFVC8A-zzt82iQugUDgWZ9dqC13F63l6AdIITuigrUdYY1Jg"/>
+<div class="text-center mb-8">
+<h4 class="text-xl font-bold">Midnight City</h4>
+<p class="text-primary text-sm font-medium">M83</p>
+</div>
+<div class="w-full mb-8">
+<div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+<span>1:45</span>
+<span>4:03</span>
+</div>
+<div class="w-full h-1 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 45%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-center gap-6">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shuffle</span>
+</button>
+<button class="text-slate-900 dark:text-slate-100 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">skip_previous</span>
+</button>
+<button class="size-14 rounded-full bg-primary text-background-dark flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-4xl fill-1">pause</span>
+</button>
+<button class="text-slate-900 dark:text-slate-100 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">skip_next</span>
+</button>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">repeat</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

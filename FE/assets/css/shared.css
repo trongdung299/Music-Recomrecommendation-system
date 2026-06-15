@@ -1,0 +1,171 @@
+/* Shared UI tweaks on top of Tailwind CDN */
+
+html,
+body {
+  height: 100%;
+}
+
+/* Prevent layout shift while layout.js injects sidebar/header */
+#app-sidebar {
+  width: 16rem; /* 64 */
+  flex: 0 0 16rem;
+}
+#app-header {
+  min-height: 72px;
+}
+
+/* Avoid flash/jerk during navigation by hiding until ready */
+body {
+  transition: opacity 120ms ease;
+}
+html.layout-loading body {
+  opacity: 0;
+}
+
+/*
+  Lock the UI palette to the original "home.html" tone.
+  This is intentional: it must NOT depend on OS/browser theme or Tailwind CDN config.
+*/
+:root {
+  --ms-primary: #1db954;
+  --ms-bg: #122017; /* background-dark in the original file */
+  --ms-fg: #f1f5f9; /* slate-100 */
+  --ms-muted: #94a3b8; /* slate-400 */
+  --ms-sidebar: #000000;
+  --ms-surface: rgba(255, 255, 255, 0.05);
+  --ms-surface-2: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  background: var(--ms-bg) !important;
+  color: var(--ms-fg);
+  color-scheme: dark;
+}
+
+/* Force all pages to the dark tone */
+html.dark {
+  background: var(--ms-bg) !important;
+}
+
+body {
+  background: transparent !important;
+  color: var(--ms-fg) !important;
+}
+
+/* Provide the original custom palette classes even without Tailwind config */
+.text-background-dark {
+  color: var(--ms-bg) !important;
+}
+.text-background-light {
+  color: #f6f8f7 !important;
+}
+.bg-background-dark {
+  background: var(--ms-bg) !important;
+}
+.bg-background-light {
+  background: #f6f8f7 !important;
+}
+
+/* Main content area should stay on the dark background */
+main {
+  background: transparent !important;
+}
+
+/* Sidebar always dark like the original layout */
+aside {
+  background: var(--ms-sidebar) !important;
+  color: var(--ms-fg) !important;
+}
+
+/* Common text utilities sometimes set light text in light mode; lock them */
+.text-slate-900 {
+  color: var(--ms-fg) !important;
+}
+.dark .text-slate-900 {
+  color: var(--ms-fg) !important;
+}
+.text-slate-600,
+.text-slate-500,
+.text-slate-400 {
+  color: var(--ms-muted) !important;
+}
+
+/* Make "light" surfaces look like the original dark UI */
+.bg-slate-100 {
+  background: var(--ms-sidebar) !important;
+}
+.bg-background-light,
+.bg-background-dark {
+  background: transparent !important;
+}
+.dark\:bg-background-dark {
+  background: transparent !important;
+}
+.dark\:bg-black {
+  background: var(--ms-sidebar) !important;
+}
+.dark\:bg-white\/5 {
+  background: var(--ms-surface) !important;
+}
+.dark\:bg-white\/10 {
+  background: var(--ms-surface-2) !important;
+}
+
+/* Primary color helpers */
+.text-primary {
+  color: var(--ms-primary) !important;
+}
+.bg-primary {
+  background: var(--ms-primary) !important;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Match home.html scrollbar look */
+.force-scrollbar {
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(29, 185, 84, 0.35);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 185, 84, 0.55);
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(29, 185, 84, 0.55) rgba(255, 255, 255, 0.04);
+}
+
+/* Utility to hide scrollbars where needed (ask_user previously did this inline) */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Active nav state helper (used by layout.js) */
+.nav-active {
+  background: rgb(226 232 240); /* slate-200 */
+  color: rgb(29 185 84); /* primary */
+}
+.dark .nav-active {
+  background: rgba(29, 185, 84, 0.2);
+}
+

@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generatedFor": "MusicRS frontend",
+    "note": "Backend can use this as API + database contract."
+  },
+  "home": {
+    "trendingSongs": [
+      {
+        "id": "song_midnight_city",
+        "title": "Midnight City",
+        "artistId": "artist_m83",
+        "artistName": "M83",
+        "coverUrl": "https://example.com/covers/midnight-city.jpg",
+        "durationSec": 243
+      },
+      {
+        "id": "song_starboy",
+        "title": "Starboy",
+        "artistId": "artist_weeknd",
+        "artistName": "The Weeknd",
+        "coverUrl": "https://example.com/covers/starboy.jpg",
+        "durationSec": 230
+      }
+    ],
+    "trendingArtists": [
+      {
+        "id": "artist_billie",
+        "name": "Billie Eilish",
+        "avatarUrl": "https://example.com/artists/billie.jpg"
+      },
+      {
+        "id": "artist_post",
+        "name": "Post Malone",
+        "avatarUrl": "https://example.com/artists/post.jpg"
+      }
+    ],
+    "recommendedSongs": [
+      {
+        "id": "song_save_your_tears",
+        "title": "Save Your Tears",
+        "artistId": "artist_weeknd",
+        "artistName": "The Weeknd",
+        "coverUrl": "https://example.com/covers/save-your-tears.jpg"
+      }
+    ],
+    "recommendedArtists": [
+      {
+        "id": "artist_justin",
+        "name": "Justin Bieber",
+        "avatarUrl": "https://example.com/artists/justin.jpg"
+      }
+    ],
+    "recommendedAlbums": [
+      {
+        "id": "album_after_hours",
+        "title": "After Hours",
+        "artistId": "artist_weeknd",
+        "artistName": "The Weeknd",
+        "coverUrl": "https://example.com/albums/after-hours.jpg"
+      }
+    ],
+    "recommendedPlaylists": [
+      {
+        "id": "playlist_chill_vibes",
+        "title": "Chill Vibes",
+        "coverUrl": "https://example.com/playlists/chill-vibes.jpg",
+        "ownerName": "MusicStream"
+      }
+    ]
+  },
+  "playlistPage": {
+    "playlists": [
+      {
+        "id": "playlist_liked",
+        "title": "Liked Songs",
+        "description": "245 songs",
+        "coverUrl": "https://example.com/playlists/liked.jpg"
+      }
+    ],
+    "selectedPlaylist": {
+      "id": "playlist_liked",
+      "title": "Liked Songs",
+      "ownerName": "Alex Rivera",
+      "totalSongs": 245,
+      "totalDurationSec": 45900,
+      "songs": [
+        {
+          "id": "song_midnight_city",
+          "index": 1,
+          "title": "Midnight City",
+          "artistName": "M83",
+          "albumName": "Hurry Up, We're Dreaming",
+          "durationSec": 243,
+          "coverUrl": "https://example.com/covers/midnight-city.jpg"
+        }
+      ]
+    }
+  },
+  "playPage": {
+    "nowPlaying": {
+      "songId": "song_midnight_city",
+      "title": "Midnight City",
+      "artistName": "M83",
+      "coverUrl": "https://example.com/covers/midnight-city.jpg",
+      "progressSec": 105,
+      "durationSec": 243,
+      "isPlaying": true
+    },
+    "upNext": [
+      {
+        "songId": "song_ultraviolet_horizon",
+        "title": "Ultraviolet Horizon",
+        "artistName": "Synthwave Collective",
+        "durationSec": 222,
+        "coverUrl": "https://example.com/covers/uv-horizon.jpg"
+      }
+    ]
+  },
+  "userPage": {
+    "profile": {
+      "id": "user_alex",
+      "displayName": "Alex Rivers",
+      "bio": "Experimental Jazz & Lo-fi Enthusiast",
+      "avatarUrl": "https://example.com/users/alex.jpg",
+      "followers": 1248,
+      "following": 452,
+      "playlistsCount": 34
+    },
+    "trendingSongs": [
+      {
+        "id": "song_midnight_city",
+        "title": "Midnight City",
+        "artistName": "Electric Dreams",
+        "coverUrl": "https://example.com/covers/midnight-city.jpg"
+      }
+    ]
+  },
+  "auth": {
+    "login": {
+      "email": "string",
+      "password": "string"
+    },
+    "register": {
+      "displayName": "string",
+      "email": "string",
+      "password": "string"
+    }
+  }
+}
+
